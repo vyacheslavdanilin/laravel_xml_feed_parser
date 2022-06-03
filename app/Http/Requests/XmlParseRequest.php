@@ -2,9 +2,7 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
-
-class XmlParseRequest extends FormRequest
+class XmlParseRequest extends BaseApiRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +22,7 @@ class XmlParseRequest extends FormRequest
     public function rules()
     {
         return [
-            'url' => 'string|required'
+            'url' => 'required|url'
         ];
     }
 }
